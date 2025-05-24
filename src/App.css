@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #1E40AF;
+  --primary-light: #3B82F6;
+  --primary-dark: #1E3A8A;
+  --secondary: #0EA5E9;
+  --secondary-light: #38BDF8;
+  --accent: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --background: #F1F5F9;
+  --card: rgba(255, 255, 255, 0.9);
+  --text-primary: #1E293B;
+  --text-secondary: #64748B;
+  --border: #E2E8F0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.glassmorphic {
+  background-color: var(--card);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.glassmorphic:hover {
+  transform: translateY(-2px);
+}
+
+.progress-bar {
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: #E2E8F0;
+  height: 0.75rem;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+.safe-fill {
+  background-color: var(--accent);
+}
+
+.moderate-fill {
+  background-color: var(--warning);
+}
+
+.risky-fill {
+  background-color: var(--danger);
+}
+
+.fade-in {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hover-scale {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.water-dial {
+  transition: transform 0.5s ease-in-out;
+}
+
+button, a, input, textarea, select {
+  transition: all 0.2s ease-in-out;
+}
+
+button:focus, a:focus, input:focus, textarea:focus, select:focus {
+  outline: none;
+  ring: 2px var(--primary-light);
+}

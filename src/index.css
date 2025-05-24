@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure Leaflet map container takes full height */
+.leaflet-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Fix for Leaflet marker icons */
+  .leaflet-div-icon {
+    background: none;
+    border: none;
+  }
+  .glassmorphic {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .progress-bar {
+    background: #e5e7eb;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+  
+  .safe-fill {
+    background: #22c55e;
+  }
+  
+  .moderate-fill {
+    background: #f59e0b;
+  }
+  
+  .risky-fill {
+    background: #ef4444;
+  }
+  
+  .water-dial {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  .hover-scale {
+    transition: transform 0.2s ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  .animate-pulse {
+    animation: micPulse 1.5s infinite;
+  }
+  
+  @keyframes micPulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  input[type="number"],
+  input[type="date"] {
+    appearance: textfield;
+  }
+  
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* New styles for auto-fetch animation */
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
